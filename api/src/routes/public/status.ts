@@ -1,4 +1,5 @@
 import { type FastifyPluginCallbackTypebox } from '@fastify/type-provider-typebox';
+import { isEmpty } from 'lodash';
 
 /**
  * Plugin for the health check endpoint.
