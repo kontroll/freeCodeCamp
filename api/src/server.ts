@@ -16,9 +16,9 @@ import {
 const requestSerializer = (request: FastifyRequest) => ({
   method: request.method,
   url: request.url,
-  ip: request.headers['x-forwarded-for']?.toString() || request.ip,
+  ip: request.headers['x-forwarded-for'] || request.ip,
   hostname: request.hostname,
-  remoteAddress: request.headers['x-forwarded-for']?.toString() || request.ip,
+  remoteAddress: request.headers['x-forwarded-for'] || request.ip,
   remotePort: request.socket.remotePort
 });
 
